@@ -2,7 +2,7 @@ import UIKit
 // Done by Zachary Hong (S10185319)
 
 //Exercise 1
-//
+
 for i in 1...20{
     print(i)
 }
@@ -16,7 +16,7 @@ for i in 1...20{
 }
 
 //Exercise 3
-//
+
 var sum = 0
 for i in 1...20{
     if !(i%2==0) {
@@ -36,6 +36,7 @@ sayIt(aNumber: 5)
 
 
 //Exercise 4
+
 func result(mark: Int) -> String {
     if mark < 50 {
         return "Fail"
@@ -47,6 +48,7 @@ func result(mark: Int) -> String {
 
 
 //Exercise 5
+
 import Foundation
 
 func generateArray(length: Int) -> [Int] {
@@ -70,6 +72,7 @@ func findMax(n: [Int]) -> Int {
 var a1 = generateArray(length: 10)
 
 //Exercise 6
+
 func findMin(n: [Int]) -> Int {
     var min = Int(INT_MAX)
     for i in 0..<n.count{
@@ -80,12 +83,15 @@ func findMin(n: [Int]) -> Int {
     return min;
 }
 
+//findMin(n: a1)
+
 
 //Exercise 7
-func findAverage(n: [Int]) -> Int {
-    let sum = n.reduce(0, +)
-    return sum/n.count
+
+func findAverage(n: [Int]) -> Double {
+    let sum:Double   = Double(n.reduce(0, +))
+    return sum/Double(n.count)
 }
 
-//findMin(n: a1)
+
 //findAverage(n: a1)
