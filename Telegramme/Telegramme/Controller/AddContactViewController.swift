@@ -15,6 +15,8 @@ class AddFriendViewController : UIViewController {
     @IBOutlet var lastNameFld: UITextField!
     @IBOutlet var mobileFld: UITextField!
     
+    let contactController:ContactController = ContactController()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
     }
@@ -28,8 +30,8 @@ class AddFriendViewController : UIViewController {
     @IBAction func createBtn(_ sender : Any){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         //Excerise 1
-        appDelegate.contactList.append(Contact(firstname: firstNameFld.text!, lastname: lastNameFld.text!, moblieno: mobileFld.text!))
-        print(String(appDelegate.contactList.count))
+        let contact :Contact = Contact(firstname: firstNameFld.text!, lastname: lastNameFld.text!, moblieno: mobileFld.text!)
+        contactController.AddContact(newContact: contact)
     }
 }
 

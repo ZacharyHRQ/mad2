@@ -10,12 +10,17 @@ import UIKit
 class ShowContactViewController : UITableViewController {
     
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
+    let contactController:ContactController = ContactController()
+    var contact_list : [Contact] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.reloadData() //refresh data
+        
+        if let contacts = contactController.retrieveAllContact() {
+            contact_list = contacts
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,13 +32,13 @@ class ShowContactViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return appDelegate.contactList.count
+        return contact_list.count
     }
     
     override func tableView(_ tableView:UITableView , cellForRowAt indexPath :IndexPath) -> UITableViewCell{
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        let contact = appDelegate.contactList[indexPath.row]
+        let contact = contact_list[indexPath.row]
         cell.textLabel!.text = "\(contact.firstName) \(contact.lastName)"
         cell.detailTextLabel!.text = "\(contact.moblieNo)"
         return cell
@@ -46,7 +51,7 @@ class ShowContactViewController : UITableViewController {
     //Exercise 2
     override func tableView(_ tableView: UITableView, commit editingStyle:UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-                appDelegate.contactList.remove(at: indexPath.row)
+                contact_list.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath as IndexPath],
                 with: UITableView.RowAnimation.fade)
         }
@@ -57,7 +62,7 @@ class ShowContactViewController : UITableViewController {
         if(segue.identifier == "showContact"){
             if let indexPath = self.tableView.indexPathForSelectedRow{
                 let controller = segue.destination as! ContactDetailsViewController
-                let value = appDelegate.contactList[indexPath.row]
+                let value = contact_list[indexPath.row]
                 controller.firstName = value.firstName
                 controller.lastName = value.lastName
                 controller.moblieNo = value.moblieNo
