@@ -1,0 +1,7 @@
+# platform :ios, '9.0'
+
+target 'QR code' do
+  # Pods for QR code
+  pod 'QRCoder', '~> 1.1'
+
+end
