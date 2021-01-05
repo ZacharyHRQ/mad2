@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Kg-Gy-8aB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Kg-Gy-8aB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,17 +130,18 @@
                     <connections>
                         <segue destination="Edd-IL-hBR" kind="relationship" relationship="viewControllers" id="kv5-zo-ojB"/>
                         <segue destination="D8n-Z8-k2w" kind="relationship" relationship="viewControllers" id="dDa-Ds-u5H"/>
+                        <segue destination="WP5-1T-ggm" kind="relationship" relationship="viewControllers" id="VrB-Dw-7Br"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvb-Y5-nBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-632" y="-133"/>
         </scene>
-        <!--Item 1-->
+        <!--New Contact-->
         <scene sceneID="z6m-YW-5js">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Edd-IL-hBR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="AU6-Rf-ClE"/>
+                    <tabBarItem key="tabBarItem" title="New Contact" id="AU6-Rf-ClE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HKU-VV-Kvh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -155,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="761" y="-486"/>
         </scene>
-        <!--Item 2-->
+        <!--ContactList-->
         <scene sceneID="u30-6M-npS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D8n-Z8-k2w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="qU7-OT-eeI"/>
+                    <tabBarItem key="tabBarItem" title="ContactList" id="qU7-OT-eeI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vsd-ui-Nag">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -224,6 +225,36 @@
                 <exit id="BwE-7J-v92" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3376.811594202899" y="229.6875"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="52b-1E-Vzj">
+            <objects>
+                <viewController id="WP5-1T-ggm" customClass="mapViewController" customModule="Telegramme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCA-wy-7xk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lhJ-WC-J4J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u0h-15-kfy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u0h-15-kfy" firstAttribute="trailing" secondItem="lhJ-WC-J4J" secondAttribute="trailing" id="aZV-MC-ASw"/>
+                            <constraint firstItem="lhJ-WC-J4J" firstAttribute="leading" secondItem="u0h-15-kfy" secondAttribute="leading" id="baN-Sl-l40"/>
+                            <constraint firstItem="u0h-15-kfy" firstAttribute="bottom" secondItem="lhJ-WC-J4J" secondAttribute="bottom" id="qxn-oD-HBX"/>
+                            <constraint firstItem="lhJ-WC-J4J" firstAttribute="top" secondItem="u0h-15-kfy" secondAttribute="top" id="vsd-PK-HLX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="BqD-wI-boS"/>
+                    <connections>
+                        <outlet property="map" destination="lhJ-WC-J4J" id="fo1-nP-uLm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeR-CU-VCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262.3188405797102" y="640.84821428571422"/>
         </scene>
     </scenes>
     <resources>
