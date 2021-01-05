@@ -12,6 +12,7 @@
 		B632934D256E739400C4246D /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632934C256E739400C4246D /* FriendController.swift */; };
 		B6329350256E924000C4246D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632934F256E924000C4246D /* Friend.swift */; };
 		B6329354256E924F00C4246D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6329353256E924F00C4246D /* Message.swift */; };
+		B666DF3B25A0C4C6000919F6 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666DF3A25A0C4C6000919F6 /* mapViewController.swift */; };
 		B6A1AF4B255547F2007EC560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1AF4A255547F2007EC560 /* AppDelegate.swift */; };
 		B6A1AF4D255547F2007EC560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1AF4C255547F2007EC560 /* SceneDelegate.swift */; };
 		B6A1AF4F255547F2007EC560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1AF4E255547F2007EC560 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		B632934C256E739400C4246D /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 		B632934F256E924000C4246D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		B6329353256E924F00C4246D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B666DF3A25A0C4C6000919F6 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		B6A1AF47255547F2007EC560 /* Telegramme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telegramme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A1AF4A255547F2007EC560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A1AF4C255547F2007EC560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				B6A1AF6B2555B178007EC560 /* ContactDetailsViewController.swift */,
 				B6A1AF4A255547F2007EC560 /* AppDelegate.swift */,
 				B6102443256C9A2F00229345 /* ContactController.swift */,
+				B666DF3A25A0C4C6000919F6 /* mapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				B6A1AF4B255547F2007EC560 /* AppDelegate.swift in Sources */,
 				B6A1AF692555A1D9007EC560 /* ShowContactViewController.swift in Sources */,
 				B632934D256E739400C4246D /* FriendController.swift in Sources */,
+				B666DF3B25A0C4C6000919F6 /* mapViewController.swift in Sources */,
 				B6A1AF4D255547F2007EC560 /* SceneDelegate.swift in Sources */,
 				B6329354256E924F00C4246D /* Message.swift in Sources */,
 				B6102444256C9A2F00229345 /* ContactController.swift in Sources */,
