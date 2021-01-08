@@ -48,7 +48,7 @@ class mapViewController: UIViewController,CLLocationManagerDelegate {
 
             annotation.coordinate = location
             annotation.title = "Ngee Ann Polytechnic"
-            annotation.subtitle = "Schoo of ICT"
+            annotation.subtitle = "School of ICT"
             self.map.addAnnotation(annotation)
             
             
